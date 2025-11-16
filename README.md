@@ -1,3 +1,179 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# epk-shinjini
+Interactive EPK website for Shinjini Moitra - Hindustani Classical Vocalist
+=======
+>>>>>>> merge-resolve
+# Shinjini Moitra - Interactive EPK Website
+
+An elegant, modern Electronic Press Kit (EPK) website for Hindustani Classical Vocalist Shinjini Moitra. Built with responsive design, smooth interactions, and a professional backend for booking and contact management.
+
+## Project Structure
+
+```
+EPK_Shin/
+├── frontend/
+│   ├── css/
+│   │   └── styles.css           # Custom CSS styles
+│   └── js/
+│       └── script.js            # Frontend JavaScript
+├── backend/
+│   ├── server.js                # Express.js server
+│   ├── routes/
+│   │   ├── contact.js           # Contact form routes
+│   │   ├── analytics.js         # Analytics tracking routes
+│   │   └── booking.js           # Booking management routes
+│   ├── controllers/
+│   │   ├── contactController.js # Contact logic
+│   │   ├── analyticsController.js # Analytics logic
+│   │   └── bookingController.js # Booking logic
+│   └── models/                  # Database models (future)
+├── HTML/
+│   └── index.html               # Main HTML page
+├── Images/
+│   ├── Stage_1.jpg
+│   └── Stage_2.jpg
+├── package.json                 # Dependencies
+├── .env                         # Environment variables
+└── README.md                    # This file
+```
+
+## Features
+
+- **Responsive Design**: Mobile-friendly layout with Tailwind CSS
+- **Dark Theme**: Modern dark aesthetic with neon accents (cyan and purple)
+- **Interactive Elements**: Smooth scroll, fade-in animations, hover effects
+- **Media Gallery**: High-resolution performance images
+- **Video Integration**: YouTube video embedding with fallback
+- **Contact Form**: Direct contact submission with backend handling
+- **Booking System**: Event booking requests management
+- **Analytics Tracking**: Event tracking for website analytics
+- **Social Integration**: Links to YouTube and Instagram
+
+## Tech Stack
+
+### Frontend
+- HTML5
+- CSS3 (Custom styles)
+- JavaScript (Vanilla)
+- Tailwind CSS (Framework)
+- Font Awesome (Icons)
+
+### Backend
+- Node.js
+- Express.js
+- CORS support
+- Environment variable management
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+<<<<<<< HEAD
+
+### Installation
+
+1. **Clone or download the project**
+   ```
+   cd EPK_Shin
+   ```
+
+2. **Install dependencies**
+   ```
+   npm install
+   ```
+
+3. **Configure environment variables**
+   - Copy `.env` file and set values for your environment
+   - Default configuration uses localhost:5000
+
+4. **Start the development server**
+   ```
+   npm run dev
+   ```
+   Or for production:
+   ```
+   npm start
+   ```
+
+5. **Access the website**
+   - Open browser: `http://localhost:5000`
+
+## API Endpoints
+
+### Contact
+- **POST** `/api/contact` - Submit contact form
+  ```json
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "subject": "Inquiry",
+    "message": "Your message here"
+  }
+  ```
+
+- **GET** `/api/contact` - Get all contact submissions (admin)
+
+### Booking
+- **POST** `/api/booking` - Submit booking request
+  ```json
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "eventType": "Concert",
+    "eventDate": "2025-12-15",
+    "venue": "Concert Hall",
+    "budget": "Amount in INR",
+    "notes": "Additional details"
+  }
+  ```
+
+- **GET** `/api/booking` - Get all bookings (admin)
+- **PUT** `/api/booking/:id` - Update booking status
+
+### Analytics
+- **POST** `/api/analytics` - Log event
+  ```json
+  {
+    "event": "external_link",
+    "data": {
+      "url": "https://...",
+      "timestamp": "2025-11-16T..."
+    }
+  }
+  ```
+
+- **GET** `/api/analytics/summary` - Get analytics summary
+
+## Development
+
+### Frontend Development
+- Edit `/frontend/css/styles.css` for styling
+- Edit `/frontend/js/script.js` for interactivity
+- HTML is in `/HTML/index.html`
+
+### Backend Development
+- Add new routes in `/backend/routes/`
+- Add logic in `/backend/controllers/`
+- Define models in `/backend/models/` (when using database)
+
+### Adding Features
+
+1. **Email Notifications** (Contact/Booking confirmations)
+   - Install nodemailer: `npm install nodemailer`
+   - Configure SMTP in `.env`
+   - Update controllers to send emails
+
+2. **Database Integration** (PostgreSQL, MongoDB, etc.)
+   - Install database driver
+   - Create models in `/backend/models/`
+   - Update controllers to use database
+
+````markdown
 # Shinjini Moitra - Interactive EPK Website
 
 An elegant, modern Electronic Press Kit (EPK) website for Hindustani Classical Vocalist Shinjini Moitra. Built with responsive design, smooth interactions, and a professional backend for booking and contact management.
@@ -298,3 +474,5 @@ EPK_Shin/
 
 **Website Design**: Interactive EPK
 **Last Updated**: November 2025
+
+````
