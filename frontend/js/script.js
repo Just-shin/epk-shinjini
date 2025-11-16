@@ -194,8 +194,10 @@ function setupFormHandler() {
 function submitForm(formElement) {
     const formData = new FormData(formElement);
     const data = Object.fromEntries(formData);
-    
-    fetch('/api/contact', {
+    // Allow configuring API base URL from `window.API_BASE_URL` (set by hosting or index.html)
+    const API_BASE_URL = (typeof window !== 'undefined' && window.API_BASE_URL) ? window.API_BASE_URL : '';
+
+    fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
