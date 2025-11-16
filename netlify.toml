@@ -12,7 +12,7 @@
 [[redirects]]
   # API proxy: forward all /api/* requests to the Render backend
   from = "/api/*"
-  to = "https://epk-backend.onrender.com/api/:splat"
+  to = "https://shinjini-epk.onrender.com/api/:splat"
   status = 200
   force = false
 
