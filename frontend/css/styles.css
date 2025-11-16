@@ -1,0 +1,522 @@
+/* ============================================
+   EPK WEBSITE - CUSTOM STYLES
+   ============================================ */
+
+/* Global Styles */
+:root {
+    --primary-dark: #0b0c10;
+    --secondary-dark: #1f2833;
+    --accent-neon: #66fcf1;
+    --accent-purple: #c700ff;
+    --light-gray: #c5c6c7;
+    --light-gray-muted: rgba(197, 198, 199, 0.8);
+    --light-gray-dim: rgba(197, 198, 199, 0.7);
+    --light-gray-pale: rgba(197, 198, 199, 0.5);
+    --light-gray-faint: rgba(197, 198, 199, 0.3);
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--light-gray);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Hero Background Section */
+.hero-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), var(--primary-dark)), url('https://placehold.co/1200x800/220836/c700ff?text=HINDUSTANI+CLASSICAL+MUSIC+AESTHETIC');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-background .space-y-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Typography */
+h1.text-gradient {
+    background: linear-gradient(45deg, var(--accent-neon), var(--accent-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(2rem, 10vw, 8rem);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+h2.text-accent-neon {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 300;
+    color: var(--accent-neon);
+    letter-spacing: 0.05em;
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3.text-accent-neon {
+    color: var(--accent-neon);
+}
+
+h3.text-accent-purple {
+    color: var(--accent-purple);
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid;
+    padding-bottom: 0.5rem;
+}
+
+h4.text-accent-neon {
+    color: var(--accent-neon);
+    border-bottom-color: rgba(102, 252, 241, 0.3);
+}
+
+h4.text-accent-purple {
+    color: var(--accent-purple);
+    border-bottom-color: rgba(199, 0, 255, 0.3);
+}
+
+p {
+    line-height: 1.6;
+}
+
+p.text-muted {
+    color: var(--light-gray-dim);
+}
+
+p.text-dim {
+    color: var(--light-gray-pale);
+}
+
+/* Card Component */
+.card {
+    background-color: var(--secondary-dark);
+    box-shadow: 0 4px 6px -1px rgba(199, 0, 255, 0.1), 
+                0 2px 4px -2px rgba(102, 252, 241, 0.1);
+    padding: 2rem;
+    border-radius: 0.75rem;
+}
+
+/* Main Container */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+main {
+    padding: 3rem 1rem;
+}
+
+/* Section Spacing */
+section {
+    margin-bottom: 4rem;
+}
+
+/* Grid Layouts */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .md-grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 769px) {
+    .md-grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Stats/Highlight Box */
+.stat-box {
+    padding: 1rem;
+    background-color: var(--secondary-dark);
+    border-bottom: 2px solid var(--accent-neon);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.stat-box .value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: white;
+}
+
+.stat-box .label {
+    font-size: 0.875rem;
+    color: var(--light-gray-pale);
+    margin-top: 0.25rem;
+}
+
+/* Link Buttons */
+.link-button {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-dark);
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    text-decoration: none;
+    color: var(--light-gray);
+}
+
+.link-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(199, 0, 255, 0.3);
+    background-color: #000;
+}
+
+.link-button i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.link-button span {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.link-button .highlight {
+    color: var(--accent-neon);
+}
+
+.link-button .highlight:hover {
+    text-decoration: underline;
+}
+
+/* CTA Button */
+.btn-cta {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    background-color: var(--accent-neon);
+    color: var(--primary-dark);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-cta:hover {
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(199, 0, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Images */
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+img.border-neon {
+    border: 1px solid rgba(102, 252, 241, 0.5);
+}
+
+img.border-purple {
+    border: 1px solid rgba(199, 0, 255, 0.5);
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    color: var(--accent-purple);
+    margin-right: 0.75rem;
+    min-width: 1.5rem;
+}
+
+.contact-info a {
+    color: var(--light-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+/* List Styles */
+ul.features-list {
+    list-style: disc;
+    padding-left: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+ul.features-list li {
+    color: var(--light-gray-dim);
+}
+
+ul.features-list li span {
+    color: white;
+    font-weight: 500;
+}
+
+/* Video Container */
+.video-container {
+    aspect-ratio: 16 / 9;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(102, 252, 241, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.video-container i {
+    font-size: 3rem;
+    color: #dc2626;
+    margin-bottom: 1rem;
+}
+
+.video-container .message {
+    color: var(--light-gray-dim);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.video-container .sub-message {
+    color: var(--light-gray-pale);
+    font-size: 0.875rem;
+    max-width: 28rem;
+    margin-bottom: 1.5rem;
+}
+
+.video-container .btn {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--accent-purple);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.video-container .btn:hover {
+    background-color: rgba(199, 0, 255, 0.8);
+}
+
+/* Training Icons */
+.training-icon {
+    font-size: 2.25rem;
+    color: var(--accent-neon);
+    margin-bottom: 0.5rem;
+}
+
+.training-item {
+    padding: 1rem;
+    border-bottom: 2px solid rgba(199, 0, 255, 0.5);
+    text-align: center;
+}
+
+.training-item p {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.training-item .sub {
+    font-size: 0.875rem;
+    color: var(--light-gray-pale);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-dark);
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(199, 0, 255, 0.3);
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 0.875rem;
+}
+
+footer p.copyright {
+    color: var(--light-gray-pale);
+}
+
+footer p.credits {
+    font-size: 0.75rem;
+    color: var(--light-gray-faint);
+    margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .hero-background {
+        min-height: 50vh;
+        background-attachment: scroll;
+    }
+    
+    h1.text-gradient {
+        font-size: 2rem;
+    }
+    
+    h2.text-accent-neon {
+        font-size: 1.25rem;
+    }
+    
+    h3 {
+        font-size: 1.75rem;
+    }
+    
+    .container {
+        padding: 2rem 0.5rem;
+    }
+    
+    main {
+        padding: 2rem 0.5rem;
+    }
+    
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Utility Classes */
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.space-y-6 > * + * {
+    margin-top: 1.5rem;
+}
